@@ -7,6 +7,14 @@ chattr +i fichier
 chattr -i fichier
 lsattr fichier
 
+# Create symbolic link to linkname
+ln -s /path/to/file linkname
+
+# Display CPU information
+cat /proc/cpuinfo
+
+# Display memory information
+cat /proc/meminfo
 commande LVM :
 
 PV :
