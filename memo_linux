@@ -1,3 +1,39 @@
 See a file permissions in octal form on a Linux/Unix : 
 f=/etc/hosts
 stat -c '%a' ${f} # GNU
+
+#rendre un fichier non modifiable (même par le cvs)
+chattr +i fichier
+chattr -i fichier
+lsattr fichier
+
+commande LVM :
+
+PV :
+
+display :
+		
+
+		pvdisplay -v
+		pvs -v
+		pvs -a
+
+scanning : pvscan -a
+add :	pvcreate /dev/sdb1
+remove :	pvremove /dev/sdb1 
+check : pvck -v /dev/sdb1 
+
+
+VG :
+display :
+		vgdisplay -v
+		vgs -v
+scanning : vgscan -v
+create : vgcreate vol_grp1 /dev/sda6 /dev/sda7
+
+LV :
+
+lvdisplay 
+lvcreate -L 50G -n gfslv vg0
+lvcreate -l 100%FREE -n yourlv testvg
+lvextend -L+100 /dev/vol_grp1/logical_vol1 
