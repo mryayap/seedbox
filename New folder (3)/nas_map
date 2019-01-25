@@ -1,0 +1,4 @@
+@echo off
+net use /delete Z:
+net use Z: \\22.0.85.2\Eng_SIEM /user:qjegou MotDePasse
+exit
